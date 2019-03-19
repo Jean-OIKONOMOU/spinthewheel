@@ -41,9 +41,10 @@ var interval = setInterval(function(){
         document.getElementById("id").id = "pyro";
         x.pause();
         x2.play();
+        document.getElementById("target").disabled = false;
         return;
     }
     document.getElementById("container").innerHTML = myArray[[Math.floor(Math.random()*myArray.length)]];    // get the item and increment i to move to the next
-
+    document.getElementById("target").disabled = true;
 }, 70);
 });
