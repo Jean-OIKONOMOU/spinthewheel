@@ -2,6 +2,12 @@ html {
   background-color: black;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -63,11 +69,10 @@ button {
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
-/* MAGIC WAND RAINBOW COLOR CHANGE */
+/* RAINBOW COLOR CHANGE */
 /* Safari and Chrome */
 @-webkit-keyframes rainbow {
   0% {
@@ -209,11 +214,7 @@ button {
   }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+/* FEUX D'ARTIFICES */
 
 #pyro>.before, .pyro>.after {
   position: absolute;
