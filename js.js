@@ -4,47 +4,56 @@ document.getElementById("target").addEventListener("click", function() {
     document.getElementById("pyro").id = "id";
   }
 
+  if (document.getElementById("bolton").className == "placeholder") {
+    document.getElementById("bolton").className = "boltonSpin";
+  } else {
+    document.getElementById("bolton").className = "placeholder";
+  }
+
   var myArray = [
     "Andrade Meilyn",
-    "Barthélémy E.Victor",
-    "Broutin Jean-Marc",
-    "Brunner Louise",
-    "Djendo Essiko Guy",
-    "Fantini Ilaria",
-    "Gaban Gaëlle",
-    "Ismail Joseph",
-    "Kremers Audrey",
-    "Marchetti Mona",
+  //  "Barthélémy E.Victor",
+  //  "Broutin Jean-Marc",
+  //  "Brunner Louise",
+    // "Djendo Essiko Guy",
+  //  "Fantini Ilaria",
+  //  "Gaban Gaëlle",
+    // "Ismail Joseph",
+  //  "Kremers Audrey",
+  //  "Marchetti Mona",
     "Mennito Caterina",
     "Mombo Rasero Pablo",
-    "Nachit Amine",
-    "Oikonomou Jean-Adrian",
-    "Scheppers Jean-Philippe",
-    "KAHOOT",
-    "Van Hove Cédric",
-    "Weiss Dorothée",
+  //  "Nachit Amine",
+  //  "Oikonomou Jean-Adrian",
+  //  "Scheppers Jean-Philippe",
+    // "KAHOOT",
+    "MILOONE",
+    // "Van Hove Cédric",
+  //  "Weiss Dorothée",
     "Diambu Antoine",
-    "M'rabet Reda",
+    // "M'rabet Reda",
     "Moulila Othman",
-    "Nowak Perry-keanou",
-    "Vanderheyden Dorian",
-    "Wauquier Teddy"
+    // "Nowak Perry-keanou",
+  //  "Vanderheyden Dorian",
+  //  "Wauquier Teddy"
   ];
   var x = document.getElementById("myAudio");
   var x2 = document.getElementById("myAudio2");
   document.getElementById("myAudio").loop = true;
   x.play();
+  var bolton = document.getElementById("bolton");
   var startTime = new Date().getTime();
   var interval = setInterval(function() {
     if (new Date().getTime() - startTime > 6000) {
       clearInterval(interval);
       document.getElementById("id").id = "pyro";
       x.pause();
+      bolton.className = "placeholder";
       x2.play();
       document.getElementById("target").disabled = false;
       return;
     }
     document.getElementById("container").innerHTML = myArray[[Math.floor(Math.random() * myArray.length)]]; // get the item and increment i to move to the next
     document.getElementById("target").disabled = true;
-  }, 70);
+  }, 50);
 });
